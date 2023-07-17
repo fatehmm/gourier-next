@@ -1,0 +1,19 @@
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spin-reverse {
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 4s linear infinite;
+}
+
+.animate-spin-reverse-slower {
+  animation: spin-reverse 6s linear infinite;
+}
