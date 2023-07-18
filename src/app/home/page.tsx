@@ -10,7 +10,12 @@ import Karusel from "../(components)/(page-components)/Karusel";
 import { Testimonials } from "../(components)/(page-components)/Testimonials";
 import { useEffect, useState, useRef } from "react";
 import { PrimaryFeatures } from "../(components)/PrimaryFeatures";
+import { Sponsors } from "../(components)/(page-components)/Sponsors";
 import "./home.css";
+import rabalonLogo from "../../images/rabalon.webp";
+import microsoftLogo from "../../images/microsoft.webp";
+import founderHubLogo from "../../images/founders-hub.png";
+import clsx from "clsx";
 import * as THREE from "three";
 import $ from "jquery";
 
@@ -36,7 +41,7 @@ export default function Home() {
 
       {/* Hero section start */}
       <header>
-        <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+        <div className="overflow-hidden py-20 sm:py-32 lg:py-40 lg:pb-48 xl:pb-56 2xl:pb-64">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
               <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
@@ -172,7 +177,8 @@ export default function Home() {
                     </defs>
                   </svg>
                 </div>
-                <div className="-mx-4 h-[500px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
+
+                <div className="-mx-4 h-[500px] lg:h-[580px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10  lg:px-0 lg:pt-10 xl:-bottom-32">
                   <div className="absolute h-full flex justify-center inset-y-[calc(1/729*100%)] left-[calc(7/729*100%)] right-[calc(5/729*100%)] rounded-[calc(58/366*100%)/calc(58/729*100%)]">
                     <img
                       className="h-full "
@@ -201,9 +207,9 @@ export default function Home() {
       <PrimaryFeatures></PrimaryFeatures>
 
       {/* Partners section start */}
-      <section className="p-4 lg:px-20 md:p-6 mt-6">
+      {/* <section className="p-4 lg:px-20 md:p-6 mt-6">
         <div>
-          <h3 className="font-space sm:pl-4 lg:pl-6 text-base sm:text-xl lg:text-2xl text-gray-600">
+          <h3 className="text-3xl font-medium tracking-tight  text-black">
             {" "}
             Our partners :{" "}
           </h3>
@@ -264,7 +270,9 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
+      <Sponsors></Sponsors>
+
       {/* Partners section end */}
 
       {/* Feature section start*/}
