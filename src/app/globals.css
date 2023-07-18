@@ -15,6 +15,9 @@
     --background-end-rgb: 244, 244, 244;
   }
 }
+:focus:not(:focus-visible) {
+  outline: none;
+}
 
 body {
   color: rgb(var(--foreground-rgb));

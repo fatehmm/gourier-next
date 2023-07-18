@@ -6,35 +6,20 @@ import Example from "../(components)/(page-components)/4_column_with_newsletter"
 import Link from "next/link";
 import Image from "next/image";
 import { Header } from "../(components)/(page-components)/Header";
-import Karusel from "../(components)/(page-components)/Karusel";
 import { Testimonials } from "../(components)/(page-components)/Testimonials";
 import { useEffect, useState, useRef } from "react";
 import { PrimaryFeatures } from "../(components)/PrimaryFeatures";
 import { Sponsors } from "../(components)/(page-components)/Sponsors";
 import "./home.css";
-import rabalonLogo from "../../images/rabalon.webp";
-import microsoftLogo from "../../images/microsoft.webp";
-import founderHubLogo from "../../images/founders-hub.png";
-import clsx from "clsx";
-import * as THREE from "three";
-import $ from "jquery";
-
-let Globe = () => null;
-if (typeof window !== "undefined") Globe = require("react-globe.gl").default;
+import { Application } from "@splinetool/runtime";
 
 export default function Home() {
-  const [globeFile, setGlobeFile] = useState(null);
-  const [imageUrl, setImageUrl] = useState("/images/texture.png");
-  const globeRef: any = useRef(null);
-  const inputRef: any = useRef(null);
-  const linkRef: any = useRef(null);
-  const arcsData = [1, 2, 3, 4, 5, 6].map(() => ({
-    startLat: (Math.random() - 0.5) * 180,
-    startLng: (Math.random() - 0.5) * 360,
-    endLat: (Math.random() - 0.5) * 180,
-    endLng: (Math.random() - 0.5) * 360,
-    color: [["#000000"][0], ["#000000"][0]],
-  }));
+  useEffect(() => {
+    const canvas = document.getElementById("globeCanvas") as HTMLCanvasElement;
+    const app = new Application(canvas);
+    app.load("https://prod.spline.design/FkW4f-rSgjDFw9kp/scene.splinecode");
+  }, []);
+
   return (
     <>
       <Header></Header>
@@ -341,7 +326,7 @@ export default function Home() {
         </div>
         <div className="mb-12 text-blackglobe sm:mb-0 md:mt-12 mt-6 sm:flex sm:items-center sm:justify-center col-start-2 row-start-3">
           <div className="sm:px-6 md:px-0 max-w-lg md:max-w-sm 2xl:max-w-lg">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium lg:font-semibold font-space">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium lg:font-semibold font-space text-black">
               {" "}
               We will deliver your packages worldwide{" "}
             </h3>
@@ -364,7 +349,7 @@ export default function Home() {
       {/* Feature section end */}
 
       <section className="globe-gourier flex flex-col sm:flex-row justify-end my-28">
-        <div className="md:w-2/3 lg:w-1/2 w-screen bg-[#11243e] p-4 sm:pl-12 pt-20">
+        <div className="md:w-2/3 lg:w-1/2 w-screen bg-indigo-950 p-4 sm:pl-12 pt-20">
           <h2 className="text-white text-[10vw] leading-tight tracking-tighter sm:tracking-normal sm:text-3xl md:text-4xl  lg:text-5xl font-medium lg:font-bold font-space bg-blend-color-burn">
             Gourier's decentralized network
           </h2>
@@ -385,11 +370,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="container md:w-1/3 sm:w-1/4 w-screen lg:w-1/2 h-[35rem] bg-[#11243e] cursor-grab">
-          <div
+        <div className="container md:w-1/3 sm:w-1/4 w-screen lg:w-1/2 h-[35rem] bg-indigo-950 cursor-grab">
+          <canvas
             id="globeCanvas"
             className=" relative md:left-[80px] lg:left-0 sm:left-[170px]"
-          ></div>
+          ></canvas>
         </div>
       </section>
 

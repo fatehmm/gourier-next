@@ -13,6 +13,8 @@
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.9.5",
+    "@splinetool/react-spline": "github:splinetool/react-spline",
+    "@splinetool/runtime": "^0.9.384",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/node": "20.4.2",
     "@types/react": "18.2.14",

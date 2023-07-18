@@ -390,19 +390,19 @@ function FeaturesDesktop() {
         {features.map((feature, featureIndex) => (
           <div
             key={feature.name}
-            className="relative rounded-2xl transition-colors hover:bg-gray-800/30"
+            className="relative rounded-2xl transition-colors hover:bg-indigo-800/30"
           >
             {featureIndex === selectedIndex && (
               <motion.div
                 layoutId="activeBackground"
-                className="absolute inset-0 bg-gray-800"
+                className="absolute inset-0 bg-indigo-800"
                 initial={{ borderRadius: 16 }}
               />
             )}
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
               <h3 className="mt-6 text-lg font-semibold text-white">
-                <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none">
+                <Tab className="text-left  ">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
                 </Tab>
@@ -429,7 +429,7 @@ function FeaturesDesktop() {
                   <Tab.Panel
                     static
                     key={feature.name + changeCount}
-                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px] [&:not(:focus-visible)]:focus:outline-none"
+                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px]  "
                   >
                     <feature.screen
                       animated
@@ -490,7 +490,7 @@ function FeaturesMobile() {
             ref={(ref) => (slideRefs.current[featureIndex] = ref)}
             className="w-full flex-none snap-center px-4 sm:px-6"
           >
-            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
+            <div className="relative transform overflow-hidden rounded-2xl bg-indigo-800 px-5 py-6">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
                   color="#13B5C8"
@@ -500,7 +500,7 @@ function FeaturesMobile() {
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
+              <div className="absolute inset-x-0 bottom-0 bg-indigo-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
                 <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
@@ -543,7 +543,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
+      className="bg-indigo-900 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">

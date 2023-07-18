@@ -9,6 +9,9 @@
     transform: rotate(-1turn);
   }
 }
+*:focus:not(:focus-visible) {
+  outline: none;
+}
 
 .animate-spin-slow {
   animation: spin 4s linear infinite;

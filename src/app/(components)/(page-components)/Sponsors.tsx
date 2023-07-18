@@ -3,17 +3,23 @@ import { Container } from "./Container";
 import logoRabalon from "../../../images/rabalon.webp";
 import logoMicrosoft from "../../../images/microsoft.webp";
 import logoFounderHub from "../../../images/founders-hub.png";
+import logoLtc from "../../../images/ltc.png";
+import developmentLogo from "../../../images/development.png";
+import plugLogo from "../../../images/plug.jpg";
 
 const sponsors = [
   { name: "Rabalon", logo: logoRabalon },
   { name: "Microsoft", logo: logoMicrosoft },
   { name: "Founder Hub", logo: logoFounderHub },
+  { name: "LTC", logo: logoLtc },
+  { name: "Development", logo: developmentLogo },
+  { name: "Plug and Play", logo: plugLogo },
 ];
 
 export function Sponsors() {
   return (
     <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
-      <Container>
+      <Container className=" ">
         <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">
           Current sponsorships and partnerships of Gourier.
         </h2>
@@ -23,7 +29,13 @@ export function Sponsors() {
               key={sponsor.name}
               className="flex items-center justify-center"
             >
-              <Image src={sponsor.logo} alt={sponsor.name} unoptimized />
+              <Image
+                width={220}
+                height={220}
+                src={sponsor.logo}
+                alt={sponsor.name}
+                unoptimized
+              />
             </div>
           ))}
         </div>
