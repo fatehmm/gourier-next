@@ -10,6 +10,7 @@ import { Testimonials } from "../(components)/(page-components)/Testimonials";
 import { useEffect, useState, useRef } from "react";
 import { PrimaryFeatures } from "../(components)/PrimaryFeatures";
 import { Sponsors } from "../(components)/(page-components)/Sponsors";
+import { Newsletter } from "../(components)/Newsletter";
 import "./home.css";
 import { Application } from "@splinetool/runtime";
 
@@ -382,7 +383,7 @@ export default function Home() {
       {/* Carousel section start */}
       <section>{/* <Karusel /> */}</section>
       {/* Carousel section end */}
-
+      <Newsletter></Newsletter>
       <Example></Example>
     </>
   );

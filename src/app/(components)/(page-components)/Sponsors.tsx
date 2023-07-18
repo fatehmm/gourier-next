@@ -5,7 +5,7 @@ import logoMicrosoft from "../../../images/microsoft.webp";
 import logoFounderHub from "../../../images/founders-hub.png";
 import logoLtc from "../../../images/ltc.png";
 import developmentLogo from "../../../images/development.png";
-import plugLogo from "../../../images/plug.jpg";
+import plugLogo from "../../../images/plug.png";
 
 const sponsors = [
   { name: "Rabalon", logo: logoRabalon },

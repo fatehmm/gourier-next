@@ -116,11 +116,11 @@ export function Testimonials() {
   return (
     <div id="gradient-testimonial" className="py-8 sm:py-10 lg:py-16">
       <div className="text-center px-12">
-        <h2 className="font-display font-space text-4xl font-bold tracking-tight text-slate-900">
+        <h2 className="font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">
           Some kind words from early customers...
         </h2>
         <p className="mt-4 text-lg tracking-tight text-slate-600">
-          Gourier is well-known shipment company that uses startup incentives.
+          Gourier is innovative shipment solution that uses startup incentives.
         </p>
       </div>
       <ul className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 px-4 lg:max-w-7xl lg:grid-cols-3 lg:px-8">
