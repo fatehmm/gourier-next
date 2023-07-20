@@ -32,7 +32,7 @@ export default function DashboardShell() {
   const [person, setPerson] = useState(null);
   useEffect(() => {
     setLoading(true);
-    fetch(`${process.env.SERVER_URL}/api/auth/me`)
+    fetch(`/api/auth/me`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
