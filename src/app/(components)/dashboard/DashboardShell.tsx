@@ -9,7 +9,9 @@ import "react-loading-skeleton/dist/skeleton.css";
 import getConfig from "next/config";
 import useSWR from "swr";
 
-const { publicRuntimeConfig } = getConfig();
+const {
+  publicRuntimeConfig: { SERVER_URL },
+} = getConfig();
 const navigation = [
   { name: "Dashboard", href: "/api/auth/me", current: true },
   { name: "Orders", href: "/dashboard/orders", current: false },
@@ -34,7 +36,7 @@ export default function DashboardShell() {
   const [person, setPerson] = useState(null);
   useEffect(() => {
     setLoading(true);
-    fetch(`${publicRuntimeConfig.url}/api/auth/me`)
+    fetch(`${SERVER_URL}/api/auth/me`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   publicRuntimeConfig: {
-    url: "https://gourier-next.vercel.app",
+    SERVER_URL: "https://gourier-next.vercel.app",
   },
 };
 
