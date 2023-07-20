@@ -123,7 +123,7 @@ export default function Home() {
                         <stop
                           offset="1"
                           stop-color="#06b6d4"
-                          stop-opacity="0"
+                          stopOpacity="0"
                         ></stop>
                       </linearGradient>
                     </defs>
@@ -157,7 +157,7 @@ export default function Home() {
                         <stop
                           offset="1"
                           stop-color="#06b6d4"
-                          stop-opacity="0"
+                          stopOpacity="0"
                         ></stop>
                       </linearGradient>
                     </defs>

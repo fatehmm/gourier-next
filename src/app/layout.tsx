@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={inter.className}>{children}</body>
+      <UserProvider>
+        <body className={inter.className}>{children}</body>
+      </UserProvider>
     </html>
   );
 }
