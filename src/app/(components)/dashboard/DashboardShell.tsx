@@ -6,12 +6,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import getConfig from "next/config";
 import useSWR from "swr";
 
-const {
-  publicRuntimeConfig: { SERVER_URL },
-} = getConfig();
 const navigation = [
   { name: "Dashboard", href: "/api/auth/me", current: true },
   { name: "Orders", href: "/dashboard/orders", current: false },
@@ -36,7 +32,7 @@ export default function DashboardShell() {
   const [person, setPerson] = useState(null);
   useEffect(() => {
     setLoading(true);
-    fetch(`${SERVER_URL}/api/auth/me`)
+    fetch(`${process.env.SERVER_URL}/api/auth/me`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
