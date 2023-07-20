@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -109,12 +110,18 @@ export function Header() {
                             <MobileNavLink href="/faq">FAQs</MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            <a href="/api/auth/login?returnTo=/dashboard">
+                            <a
+                              className="text-black"
+                              href="/api/auth/login?returnTo=/dashboard"
+                            >
                               Log in
                             </a>
-                            <Button href="/api/auth/login?returnTo=/dashboard">
+                            <a
+                              className=" text-black"
+                              href="/api/auth/login?returnTo=/dashboard"
+                            >
                               Register
-                            </Button>
+                            </a>
                           </div>
                         </Popover.Panel>
                       </>
@@ -125,13 +132,13 @@ export function Header() {
             </Popover>
             <a
               href="/api/auth/login?returnTo=/dashboard"
-              className="hidden outline-1 text-black lg:block"
+              className="hidden outline-1 text-black hover:bg-gray-300 py-2 px-3 rounded-lg  transition duration-75 lg:block"
             >
               Log in
             </a>
             <a
               href="/api/auth/login?returnTo=/dashboard"
-              className="hidden lg:block"
+              className="hidden lg:block bg-gray-900 hover:bg-gray-600 px-3 py-2 rounded-lg"
             >
               Register
             </a>

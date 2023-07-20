@@ -1,3 +1,4 @@
+"use client";
 import { useState, Fragment } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
