@@ -70,7 +70,7 @@ export function PrimaryFeatures() {
         alt=""
         width={2245}
         height={1636}
-        unoptimized
+        loading="eager"
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
