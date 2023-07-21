@@ -1,12 +1,12 @@
 "use client";
-import DashboardShell from "../(components)/dashboard/DashboardShell";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { PrimaryFeatures } from "../(components)/dashboard/PrimaryFeatures";
 export default function Profile() {
   const { user, error, isLoading } = useUser();
   if (user)
     return (
       <>
-        <DashboardShell></DashboardShell>
+        <PrimaryFeatures></PrimaryFeatures>
       </>
     );
 }

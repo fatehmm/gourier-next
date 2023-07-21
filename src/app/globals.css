@@ -18,9 +18,11 @@
 :focus:not(:focus-visible) {
   outline: none;
 }
+button:focus {
+  outline: none;
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,

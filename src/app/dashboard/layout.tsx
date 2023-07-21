@@ -7,9 +7,11 @@ import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import useSWR from "swr";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
-  { name: "Dashboard", href: "/api/auth/me", current: true },
+  { name: "Dashboard", href: "/dashboard", current: false },
   { name: "Orders", href: "/dashboard/orders", current: false },
   { name: "Travels", href: "/dashboard/travels", current: false },
   { name: "FAQ", href: "/dashboard/faq", current: false },
@@ -25,7 +27,27 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function DashboardShell() {
+export default function DashbordLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [navigation, setNavigation] = useState([
+    { name: "Dashboard", href: "/dashboard", current: false },
+    { name: "Orders", href: "/dashboard/orders", current: false },
+    { name: "Travels", href: "/dashboard/travels", current: false },
+    { name: "FAQ", href: "/dashboard/faq", current: false },
+    { name: "Support", href: "/dashboard/support", current: false },
+  ]);
+
+  const pathname = usePathname();
+  useEffect(() => {
+    const updatedNavigation = navigation.map((item) => ({
+      ...item,
+      current: item.href.trim() === pathname.trim(),
+    }));
+    setNavigation(updatedNavigation);
+  }, [pathname]);
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [person, setPerson] = useState(null);
@@ -50,7 +72,6 @@ export default function DashboardShell() {
           updated_at: data.updated_at,
         });
         setLoading(false);
-        console.table(data);
       });
   }, []);
 
@@ -75,7 +96,7 @@ export default function DashboardShell() {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
                             className={classNames(
@@ -87,7 +108,7 @@ export default function DashboardShell() {
                             aria-current={item.current ? "page" : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -167,9 +188,8 @@ export default function DashboardShell() {
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                   {navigation.map((item) => (
-                    <Disclosure.Button
+                    <Link
                       key={item.name}
-                      as="a"
                       href={item.href}
                       className={classNames(
                         item.current
@@ -180,7 +200,7 @@ export default function DashboardShell() {
                       aria-current={item.current ? "page" : undefined}
                     >
                       {item.name}
-                    </Disclosure.Button>
+                    </Link>
                   ))}
                 </div>
                 <div className="border-t border-gray-700 pt-4 pb-3">
@@ -231,7 +251,7 @@ export default function DashboardShell() {
             {isLoading ? (
               <Skeleton />
             ) : (
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-3xl font-medium tracking-tight text-blue-900">
                 Welcome, {person?.firstName}!
               </h1>
             )}
@@ -239,7 +259,7 @@ export default function DashboardShell() {
         </header>
         <main>
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            {/* REPLACE HERE */}
+            {children}
           </div>
         </main>
       </div>

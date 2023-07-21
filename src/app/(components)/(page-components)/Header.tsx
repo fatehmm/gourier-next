@@ -138,7 +138,7 @@ export function Header() {
             </a>
             <a
               href="/api/auth/login?returnTo=/dashboard"
-              className="hidden lg:block bg-gray-900 hover:bg-gray-600 px-3 py-2 rounded-lg"
+              className="hidden lg:block bg-gray-900 text-white hover:bg-gray-600 px-3 py-2 rounded-lg"
             >
               Register
             </a>
