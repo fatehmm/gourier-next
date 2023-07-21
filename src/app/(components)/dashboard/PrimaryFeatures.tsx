@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Container } from "../Container";
-import backgroundImage from "../../../images/background-features.jpg";
+import backgroundImage from "../../../images/background-features.webp";
 import screenshotExpenses from "../../../images/screenshots/expenses.png";
 import screenshotPayroll from "../../../images/screenshots/payroll.png";
 import screenshotReporting from "../../../images/screenshots/reporting.png";

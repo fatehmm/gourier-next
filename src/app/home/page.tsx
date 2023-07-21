@@ -156,7 +156,7 @@ export default function Home() {
                   <div className="absolute h-full flex justify-center inset-y-[calc(1/729*100%)] left-[calc(7/729*100%)] right-[calc(5/729*100%)] rounded-[calc(58/366*100%)/calc(58/729*100%)]">
                     <img
                       className="h-full "
-                      src="/assets/img/HeaderImage.png"
+                      src="/assets/img/HeaderImage.webp"
                       alt="Gourier Employees"
                     />
                   </div>
