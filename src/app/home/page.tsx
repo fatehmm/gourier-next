@@ -335,51 +335,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Feature section end */}
-
-      {/* <section className="globe-gourier flex flex-col sm:flex-row justify-end my-28">
-        <div className="md:w-2/3 lg:w-1/2 w-screen bg-indigo-950 p-4 sm:pl-12 pt-20">
-          <h2 className="text-white text-[10vw] leading-tight tracking-tighter sm:tracking-normal sm:text-3xl md:text-4xl  lg:text-5xl font-medium lg:font-bold font-space bg-blend-color-burn">
-            Gourier's decentralized network
-          </h2>
-          <p className="text-white font-space pt-6">
-            Our travellers from all aroud the globe are ready to carry your
-            packages and items.
-          </p>
-          <p className="text-white font-space pt-6">
-            This is our thing. Moving items from point A to point B, and we are
-            really good at it.
-          </p>
-          <div className="pt-16">
-            <div className="sm:w-1/3 Stats">
-              <span className="font-space text-white text-4xl block">250+</span>
-              <span className="font-space text-white text-xl">
-                customers around the globe
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="container md:w-1/3 sm:w-1/4 w-screen lg:w-1/2 h-[35rem] bg-indigo-950 cursor-grab">
-          {/* <canvas
-            id="globeCanvas"
-            className=" relative md:left-[80px] lg:left-0 sm:left-[170px]"
-          ></canvas> */}
-      {/* <Globe
-            width={100}
-            height={100}
-            hexPolygonResolution={3}
-            hexPolygonMargin={0.3}
-            hexPolygonColor={() => "#ffffff"}
-            backgroundColor="#000"
-            atmosphereColor="#fff"
-          />
-        </div>
-      </section> */}
 
       <Testimonials></Testimonials>
-      {/* Carousel section start */}
-      <section>{/* <Karusel /> */}</section>
-      {/* Carousel section end */}
       <Newsletter></Newsletter>
       <Example></Example>
     </>
