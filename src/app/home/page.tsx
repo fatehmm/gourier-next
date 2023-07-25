@@ -30,15 +30,13 @@ export default function Home() {
                   </p>
                   <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
                     {/* {!isAuthenticated ? ( */}
-                    <button
-                      // onClick={() => {
-                      //   loginWithRedirect();
-                      // }}
+                    <Link
+                      href="/dashboard"
                       className="rounded-lg flex items-center px-4 py-1 border border-transparent  text-white bg-[#0a2540]"
                     >
                       {" "}
                       Get started{" "}
-                    </button>
+                    </Link>
                     {/* ) : null} */}
 
                     <Link
@@ -250,7 +248,7 @@ export default function Home() {
       {/* Partners section end */}
 
       {/* Feature section start*/}
-      <section className="p-4 mt-6 lg:mt-12 sm:grid sm:grid-cols-2 sm:grid-rows-1">
+      {/* <section className="p-4 mt-6 lg:mt-12 sm:grid sm:grid-cols-2 sm:grid-rows-1">
         <div className="md:mt-12 md:flex md:justify-center col-start-1 row-start-1">
           <div className="min-w-48 max-w-lg md:max-w-sm 2xl:max-w-lg sm:w-full h-auto">
             <Image
@@ -334,7 +332,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Testimonials></Testimonials>
       <Newsletter></Newsletter>

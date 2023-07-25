@@ -9,15 +9,36 @@ export function NavLinks() {
   return (
     <Fragment>
       {[
-        ["Home", "/home"],
-        ["Pricing", "/pricing"],
-        ["Contact", "/contact"],
-        ["FAQs", "/faq"],
-      ].map(([label, href], index) => (
+        [
+          "Home",
+          "/home",
+          "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
+        ],
+        [
+          "Pricing",
+          "/pricing",
+          "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
+        ],
+        [
+          "Contact",
+          "/contact",
+          "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
+        ],
+        [
+          "FAQs",
+          "/faq",
+          "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
+        ],
+        [
+          "Order now → ",
+          "/dashboard",
+          "relative text-blue-600 transition-all transition-transform hover:transition hover:translate-x-1  -my-2 -mx-3 rounded-lg px-3 py-2 text-sm  transition-colors delay-150  hover:delay-[0ms]",
+        ],
+      ].map(([label, href, className], index) => (
         <Link
           key={label}
           href={href}
-          className="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]"
+          className={className}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >

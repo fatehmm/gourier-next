@@ -86,6 +86,17 @@ export default function Settings() {
               <h3 className="text-lg font-medium leading-6 text-gray-900">
                 Personal Information
               </h3>
+              <button
+                onClick={() => {
+                  fetch("/api/create-identity-session", {
+                    method: "post",
+                    body: JSON.stringify({ user_id: person.sub }),
+                  });
+                }}
+              >
+                {" "}
+                Verify me MF
+              </button>
               <p className="mt-1 text-sm text-gray-500">
                 Use a permanent address where you can receive mail.
               </p>
