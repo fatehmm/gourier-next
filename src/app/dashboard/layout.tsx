@@ -3,14 +3,9 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { UserButton, currentUser, useUser } from "@clerk/nextjs";
 import Image from "next/image";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { store } from "@/store";
-import { setPersonState } from "@/store/personSlice";
-import ReactiveHeader from "./ReactiveHeader";
-
+import { Header } from "../(components)/dashboard/Header";
 export default function DashbordLayout({
   children,
 }: {
@@ -22,7 +17,7 @@ export default function DashbordLayout({
     return (
       <>
         <div className="min-h-full">
-          <ReactiveHeader></ReactiveHeader>
+          <Header></Header>
 
           <header className="bg-white shadow">
             <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
