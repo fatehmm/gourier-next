@@ -11,7 +11,7 @@ export function NavLinks() {
       {[
         [
           "Home",
-          "/dashboard",
+          "/home",
           "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
         ],
         [
@@ -22,11 +22,6 @@ export function NavLinks() {
         [
           "Be a traveler",
           "/travels",
-          "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
-        ],
-        [
-          "FAQs",
-          "/faq",
           "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-[0ms]",
         ],
       ].map(([label, href, className], index) => (

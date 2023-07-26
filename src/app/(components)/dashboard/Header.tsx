@@ -57,11 +57,11 @@ export function Header() {
     <header>
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex items-center gap-16">
+          <div className="relative z-10 flex w-full items-center ">
             <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
-            <div className="hidden lg:flex lg:gap-10">
+            <div className="hidden lg:flex w-full lg:gap-10 justify-center">
               <NavLinks />
             </div>
           </div>
@@ -102,21 +102,15 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
+                          className="absolute  inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
-                          <div className="space-y-4">
-                            <MobileNavLink href="/dashboard">
-                              Home
-                            </MobileNavLink>
+                          <div className="space-y-4 ">
+                            <MobileNavLink href="/home">Home</MobileNavLink>
                             <MobileNavLink href="/dashboard/orders">
-                              Orders
+                              Book an order
                             </MobileNavLink>
                             <MobileNavLink href="/dashboard/travels">
-                              Travels
-                            </MobileNavLink>
-                            <MobileNavLink href="/faq">FAQs</MobileNavLink>
-                            <MobileNavLink href="/dashboard/contact">
-                              Contact
+                              Be a traveler
                             </MobileNavLink>
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
