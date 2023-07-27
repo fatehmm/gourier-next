@@ -2,10 +2,10 @@ import Image from "next/image";
 import { Container } from "./Container";
 import logoRabalon from "../../../images/rabalon.webp";
 import logoMicrosoft from "../../../images/microsoft.webp";
-import logoFounderHub from "../../../images/founders-hub.png";
-import logoLtc from "../../../images/ltc.png";
-import developmentLogo from "../../../images/development.png";
-import plugLogo from "../../../images/plug.png";
+import logoFounderHub from "../../../images/founders-hub.webp";
+import logoLtc from "../../../images/ltc.webp";
+import developmentLogo from "../../../images/development.webp";
+import plugLogo from "../../../images/plug.webp";
 
 const sponsors = [
   { name: "Rabalon", logo: logoRabalon },
